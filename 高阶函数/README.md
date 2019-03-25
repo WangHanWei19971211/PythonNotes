@@ -40,18 +40,34 @@ reduce(function, iterable[, initializer])
 import functools as fs
 list1 = [i for i in range(5)]#0 1 2 3 4
 def add(a,b):
+    print(a,b)
     return a+b
 print(fs.reduce(add,list1)) #10
+# print(fs.reduce(lambda x, y: x+y, list1)  # 使用 lambda 匿名函数,功能相同，输出10
 ```
+结果：
+~~~sql
+0 1
+1 2
+3 3
+6 4
+10
+~~~
 例2
 ```python
->>>def add(x, y) :            # 两数相加
-...     return x + y
-... 
->>> reduce(add, [1,2,3,4,5])   # 计算列表和：1+2+3+4+515
->>> reduce(lambda x, y: x+y, [1,2,3,4,5])  # 使用 lambda 匿名函数
-15
+sentences = ['The Deep Learning textbook is a resource intended to help students and practitioners enter the field of machine learning in general and deep learning in particular. '] 
+def count(x,y):
+    print(x,y)
+    return x+y.count('learning')
+#word_count =fs.reduce(lambda a,x:a+x.count("learning"),sentences,0)
+word_count = fs.reduce(count,sentences,0)
+print(word_count)
 ```
+结果：
+~~~sql
+0 The Deep Learning textbook is a resource intended to help students and practitioners enter the field of machine learning in general and deep learning in particular. 
+2
+~~~
 
 **注意：**
 
