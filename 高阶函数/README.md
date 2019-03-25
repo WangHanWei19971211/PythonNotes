@@ -34,6 +34,16 @@ reduce(function, iterable[, initializer])
 
 以下实例展示了 reduce() 的使用方法：
 
+例1
+```python
+
+import functools as fs
+list1 = [i for i in range(5)]#0 1 2 3 4
+def add(a,b):
+    return a+b
+print(fs.reduce(add,list1)) #10
+```
+例2
 ```python
 >>>def add(x, y) :            # 两数相加
 ...     return x + y
