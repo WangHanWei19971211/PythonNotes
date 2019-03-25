@@ -62,6 +62,7 @@ def count(x,y):
 #word_count =fs.reduce(lambda a,x:a+x.count("learning"),sentences,0)
 word_count = fs.reduce(count,sentences,0)
 print(word_count)
+#统计次数最方便的是：print(sentences[0].count('learning'))
 ```
 结果：
 ~~~sql
