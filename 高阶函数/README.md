@@ -130,7 +130,7 @@ Python 3.x 返回迭代器。
 #### 实例
 
 以下实例展示了 map() 的使用方法：
-例:
+例1:
 ```python
 #计算平方数
 list1 = [1,2,3,4]
@@ -145,6 +145,20 @@ print(list(map(lambda x:x**2,list1)))
 <map object at 0x000001B2E0758E80>
 [1, 4, 9, 16]
 [1, 4, 9, 16]
+~~~
+例2:两个列表中元素相加
+```python
+list1 = [1,2,3,4]
+list2 = [2,2,4,4]
+def func(arg):
+    return arg**2
+#print(map(func,list1))
+#print(list(map(func,list1)))
+print(list(map(lambda x,y:x+y,list1,list2)))
+```
+结果：
+~~~sql
+[3, 4, 7, 8]
 ~~~
 
 
