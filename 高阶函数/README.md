@@ -205,17 +205,18 @@ filter(function, iterable)
 以下展示了使用 filter 函数的实例：
 
 #### 过滤出列表中的所有奇数：
-
 ```python
 def is_odd(n):    
     return n % 2 == 1 
-newlist = filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-print(newlist)
+iter1 = filter(is_odd, [i for i in range(11)])
+print(iter1) #python3返回的是迭代器
+print(list(iter1))
 ```
 
 输出结果 ：
 
 ```
+<filter object at 0x000001B2E072EC88>
 [1, 3, 5, 7, 9]
 ```
 
