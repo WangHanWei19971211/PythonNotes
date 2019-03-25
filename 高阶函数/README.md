@@ -161,6 +161,15 @@ print(list(map(lambda x,y:x+y,list1,list2)))
 ~~~sql
 [3, 4, 7, 8]
 ~~~
+例3;
+```python
+import functools as fs
+str1 = '123456'
+l = list(map(lambda x:int(x),str1))
+print(l) #[1, 2, 3, 4, 5, 6]
+print(fs.reduce(lambda x,y:x*10+y,l)) #123456
+print(fs.reduce(lambda x,y:x*10+y,l)==int('123456')) #True
+```
 
 
 
