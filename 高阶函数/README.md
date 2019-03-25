@@ -56,6 +56,7 @@ print(fs.reduce(add,list1)) #10
 例2
 ```python
 sentences = ['The Deep Learning textbook is a resource intended to help students and practitioners enter the field of machine learning in general and deep learning in particular. '] 
+#！！！注意：此处sentences是列表，文章是列表中的元素
 def count(x,y):
     print(x,y)
     return x+y.count('learning')
